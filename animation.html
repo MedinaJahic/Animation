@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 3D Animation </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background:#050210;
+            
+            }
+        .circle {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            margin: 0 auto;
+            top: 220px;
+            
+            
+        
+
+            animation: animate 0.5s linear infinite;
+            
+}
+@keyframes animate
+{
+    0%
+    {
+      transform: rotate(0deg);
+      filter: blur(10px);
+    }
+    50%
+    {
+      transform: rotate(120deg);
+      filter: blur(15px);
+    }
+    100%
+    {
+    transform: rotate(360deg);
+    filter: blur(15px);
+    }
+
+
+}
+
+
+
+#center {
+    position: relative;
+    width:155px;
+    height:155px;
+    background-color:#050210;
+    border-radius: 100%;
+    border: solid 2px black;
+    margin: 0 auto;
+    top: 32px;
+}
+
+.pulse {
+    width: 20px;
+    height: 20px;
+    background:rgba(179, 161, 157, 0.137);
+    border-radius: 50%;
+    color: #dfdbec;
+    margin: 0 auto;
+    transform: translateX(-1px) translateY(68px);
+  
+    animation: pulse 2s linear infinite;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(179, 161, 157, 0.137);
+    }
+    40% {
+        box-shadow: 0 0 0 70px rgba(179, 161, 157, 0.137);
+    }
+    80% {
+        box-shadow: 0 0 0 70px rgba(179, 161, 157, 0.137);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(179, 161, 157, 0.137);
+    }
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="circle">
+        
+    </div>
+
+    <div id="center">
+        <div class="pulse"></div> 
+    </div>
+</body>
+</html>
